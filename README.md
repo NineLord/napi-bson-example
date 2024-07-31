@@ -12,6 +12,7 @@ npm run build
 And lastly, try to use it using the test file:
 ```shell
 node simple-test.js
+node simple-test-2.js # Using wrapper to the generated API from napi, to hide the [de]serialization on the NodeJS side.
 ```
 
 ## Notes
