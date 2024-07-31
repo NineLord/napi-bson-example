@@ -1,0 +1,19 @@
+[package]
+authors = ["Shaked F"]
+edition = "2021"
+name    = "napi-bson-example"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi        = { version = "2.16.8", features = [ "serde-json", "async", "napi4" ] }
+napi-derive = { version = "2.16.10", features = [ "type-def" ] }
+mongodb = "3.0.1"
+
+[build-dependencies]
+napi-build = "2"
+
+[profile.release]
+lto = true
